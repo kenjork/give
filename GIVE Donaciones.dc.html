@@ -358,7 +358,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
 const FAQS = [
   { q: "¿Cómo puedo realizar una donación?", a: "Contenido por definir con GIVE. En esta sección se explicarán los canales oficiales habilitados para realizar un aporte." },
   { q: "¿Puedo realizar una donación mensual?", a: "Contenido por definir con GIVE. El módulo de donación contempla la opción de aporte mensual; las condiciones operativas se confirmarán con la organización." },
@@ -374,7 +374,7 @@ class Component extends DCLogic {
     return {
       toggleMenu: () => this.setState((s) => ({ menuOpen: !(s && s.menuOpen) })),
       menuPanel: { overflow: "hidden", maxHeight: (this.state && this.state.menuOpen) ? "460px" : "0px", transition: "max-height 0.34s cubic-bezier(0.4,0,0.2,1)", background: "#FFFFFF" },
-      showLabels: this.props.showPlaceholderLabels ?? true,
+      showLabels: this.props.showPlaceholderLabels ?? false,
       enviar: () => this.setState({ enviado: true }),
       enviarLabel: this.state.enviado ? "¡Listo! Te contactaremos pronto ✓" : "Continuar con mi donación",
       camino: [

@@ -317,13 +317,13 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;},&quot;showAlliesCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;},&quot;showAlliesCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     return {
       toggleMenu: () => this.setState((s) => ({ menuOpen: !(s && s.menuOpen) })),
       menuPanel: { overflow: "hidden", maxHeight: (this.state && this.state.menuOpen) ? "460px" : "0px", transition: "max-height 0.34s cubic-bezier(0.4,0,0.2,1)", background: "#FFFFFF" },
-      showLabels: this.props.showPlaceholderLabels ?? true,
+      showLabels: this.props.showPlaceholderLabels ?? false,
       showAlliesCta: this.props.showAlliesCta ?? true,
     };
   }

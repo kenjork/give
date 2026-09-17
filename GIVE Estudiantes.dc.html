@@ -136,8 +136,7 @@
         </sc-for>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; margin-top: 32px">
-        <p style="font-family: IBM Plex Mono, monospace; font-size: 11px; line-height: 1.6; letter-spacing: 0.04em; color: #5A6B64; margin: 0; max-width: 620px">Contenido demostrativo del prototipo. Las empresas y posiciones deben validarse con GIVE. No corresponden a vacantes disponibles en tiempo real.</p>
+      <div style="display: flex; justify-content: center; margin-top: 32px">
         <a href="GIVE Empresas.dc.html" style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 16px 28px; border-radius: 999px; background: #0E2A21; color: #FFFFFF; font-size: 16px; font-weight: 600" style-hover="background: #00B276; color: #FFFFFF">Ver empresas aliadas</a>
       </div>
     </div>
@@ -388,7 +387,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
 const FAQS = [
   { q: "¿Quiénes pueden participar en GIVE?", a: "Jóvenes que hayan completado la secundaria y quieran prepararse para conseguir un trabajo formal. No necesitas experiencia previa." },
   { q: "¿Cuánto dura el programa?", a: "Aproximadamente 3 meses, con una dedicación de 3 a 4 horas por semana." },
@@ -403,7 +402,7 @@ class Component extends DCLogic {
   state = { open: 0, situacion: null, enviado: false };
 
   renderVals() {
-    const showLabels = this.props.showPlaceholderLabels ?? true;
+    const showLabels = this.props.showPlaceholderLabels ?? false;
     return {
       toggleMenu: () => this.setState((s) => ({ menuOpen: !(s && s.menuOpen) })),
       menuPanel: { overflow: "hidden", maxHeight: (this.state && this.state.menuOpen) ? "460px" : "0px", transition: "max-height 0.34s cubic-bezier(0.4,0,0.2,1)", background: "#FFFFFF" },
