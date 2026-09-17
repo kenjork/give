@@ -122,7 +122,7 @@
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
         <sc-for list="{{ empresas }}" as="empresa" hint-placeholder-count="6">
           <div style="background: #FFFFFF; border: 1px solid #E2EAE6; border-radius: 22px; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 18px; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease" style-hover="transform: translateY(-5px); box-shadow: 0 16px 38px rgba(14,42,33,0.09); border-color: #CFE0D9">
-            <div style="height: 56px; border-radius: 12px; border: 1px dashed #D3DEDA; background: #FAFCFB; display: flex; align-items: center; justify-content: center; font-family: IBM Plex Mono, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8C9C95">Logo</div>
+            <div style="height: 56px; border-radius: 12px; border: 1px solid #E2EAE6; background: #FFFFFF; display: flex; align-items: center; justify-content: center; padding: 10px; min-width: 0; min-height: 0; overflow: hidden"><img src="{{ empresa.src }}" alt="{{ empresa.nombre }}" style="width: 100%; height: 100%; object-fit: contain; display: block" /></div>
             <div>
               <h3 style="font-family: Outfit, sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 4px">{{ empresa.nombre }}</h3>
               <span style="font-size: 13px; color: #6D7E77">Posiciones frecuentes</span>
@@ -411,12 +411,12 @@ class Component extends DCLogic {
       enviar: () => this.setState({ enviado: true }),
       enviarLabel: this.state.enviado ? "¡Listo! Te contactaremos pronto ✓" : "Quiero participar",
       empresas: [
-        { nombre: "Plaza Vea", roles: ["Cajero", "Reponedor", "Atención al cliente"] },
-        { nombre: "Vivanda", roles: ["Cajero", "Reponedor", "Auxiliar"] },
-        { nombre: "Empresa aliada 03", roles: ["Auxiliar de almacén", "Atención al cliente", "Operaciones"] },
-        { nombre: "Empresa aliada 04", roles: ["Atención al cliente", "Ventas", "Auxiliar"] },
-        { nombre: "Empresa aliada 05", roles: ["Operaciones", "Auxiliar de almacén", "Reponedor"] },
-        { nombre: "Empresa aliada 06", roles: ["Atención al cliente", "Cajero", "Operaciones"] },
+        { nombre: "Plaza Vea", src: "assets/aliados/plaza-vea.webp", roles: ["Cajero", "Reponedor", "Atención al cliente"] },
+        { nombre: "Vivanda", src: "assets/aliados/vivanda.webp", roles: ["Cajero", "Reponedor", "Auxiliar"] },
+        { nombre: "Tottus", src: "assets/aliados/tottus.png", roles: ["Auxiliar de almacén", "Atención al cliente", "Operaciones"] },
+        { nombre: "Metro", src: "assets/aliados/metro.png", roles: ["Atención al cliente", "Cajero", "Reponedor"] },
+        { nombre: "Tiendas Mass", src: "assets/aliados/mass.webp", roles: ["Operaciones", "Auxiliar de almacén", "Reponedor"] },
+        { nombre: "Wong", src: "assets/aliados/wong.jpg", roles: ["Atención al cliente", "Cajero", "Operaciones"] },
       ],
       aprendizajes: [
         { n: "01", titulo: "Autoconocimiento", texto: "Reconoce tus fortalezas, habilidades y oportunidades de mejora." },
