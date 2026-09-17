@@ -350,7 +350,7 @@ class Component extends DCLogic {
         active: this.state.situacion === label,
       })),
       onSituacionChange: (e) => this.setState({ situacion: e.target.value }),
-      canales: ["Correo electrónico — por confirmar", "Instagram", "LinkedIn", "Facebook"],
+      canales: ["Instagram", "LinkedIn", "Facebook"],
       enviar: () => this.setState({ enviado: true }),
       reiniciar: () => this.setState({ enviado: false }),
     };
