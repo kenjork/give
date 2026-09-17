@@ -46,6 +46,7 @@
     [style*="grid-template-rows"] { grid-template-rows: auto !important; }
     section [style*="padding: 32px"] { padding: 20px 0 !important; }
     [data-btn-row] { flex-direction: column !important; align-items: stretch !important; }
+    [data-stack-mobile] { grid-template-columns: 1fr !important; }
   }
 </style>
 </helmet>
@@ -186,7 +187,7 @@
       <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">El proceso</span>
       <h2 style="font-family: Outfit, sans-serif; font-size: 44px; line-height: 1.12; letter-spacing: -0.02em; font-weight: 600; margin: 0; text-wrap: pretty">Convertirse en empresa aliada es sencillo.</h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px">
+    <div data-stack-mobile="" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px">
       <sc-for list="{{ proceso }}" as="paso" hint-placeholder-count="4">
         <div style="background: #F6F9F8; border: 1px solid #E2EAE6; border-radius: 22px; padding: 30px 28px 34px; display: flex; flex-direction: column; gap: 12px; position: relative; transition: transform 0.28s ease, border-color 0.28s ease" style-hover="transform: translateY(-5px); border-color: #A4D9C2">
           <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D">{{ paso.n }}</span>
