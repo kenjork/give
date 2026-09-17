@@ -47,6 +47,7 @@
     section [style*="padding: 32px"] { padding: 20px 0 !important; }
     [data-btn-row] { flex-direction: column !important; align-items: stretch !important; }
     [data-wrap-row] { flex-wrap: wrap !important; row-gap: 10px !important; }
+    [data-hide-mobile] { display: none !important; }
   }
 </style>
 </helmet>
@@ -127,7 +128,7 @@
     </div>
 
     <div style="position: relative">
-      <div style="position: absolute; left: 0; right: 0; top: 18px; height: 2px; background: #E2EAE6; display: block"></div>
+      <div data-hide-mobile="" style="position: absolute; left: 0; right: 0; top: 18px; height: 2px; background: #E2EAE6; display: block"></div>
       <div style="position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px">
         <sc-for list="{{ camino }}" as="paso" hint-placeholder-count="5">
           <div style="display: flex; flex-direction: column; gap: 14px">
