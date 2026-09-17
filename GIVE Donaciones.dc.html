@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F8F7; }
+  a { color: #00B276; text-decoration: none; transition: color 0.22s ease, background 0.22s ease, border-color 0.22s ease, transform 0.22s ease; }
+  a:hover { color: #00915F; }
+  button { transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease; }
+  input { font-family: Figtree, system-ui, sans-serif; transition: border-color 0.2s ease; }
+  section[id] { scroll-margin-top: 104px; }
+  @media (min-width: 921px) { [data-mnav], [data-mpanel] { display: none !important; } }
+  @media (max-width: 920px) {
+    header nav, [data-hdr-cta] { display: none !important; }
+    [data-mnav] { display: flex !important; }
+    header [style*="max-width: 1200px"] { height: 68px !important; padding: 0 20px !important; }
+    header img { height: 30px !important; }
+    [style*="height: 84px"] { height: 68px !important; }
+    [style*="max-width: 1200px"] { padding: 56px 20px !important; }
+    footer [style*="padding: 0 24px"] { padding: 0 20px !important; }
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    [style*="repeat(4, 1fr)"], [style*="repeat(6, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+    [style*="gap: 72px"], [style*="gap: 80px"], [style*="gap: 88px"], [style*="gap: 64px"] { gap: 32px !important; }
+    h1 { font-size: 36px !important; line-height: 1.1 !important; }
+    h2 { font-size: 27px !important; line-height: 1.18 !important; }
+    h3 { font-size: 20px !important; }
+    [style*="font-size: 112px"], [style*="font-size: 92px"], [style*="font-size: 84px"], [style*="font-size: 76px"], [style*="font-size: 64px"], [style*="font-size: 58px"], [style*="font-size: 56px"], [style*="font-size: 54px"], [style*="font-size: 52px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"], [style*="font-size: 42px"], [style*="font-size: 40px"], [style*="font-size: 34px"], [style*="font-size: 32px"], [style*="font-size: 30px"], [style*="font-size: 28px"] { font-size: 26px !important; }
+    [style*="min-width: 200px"], [style*="min-width: 220px"] { min-width: 0 !important; }
+    [style*="position: absolute"] { position: static !important; box-shadow: none !important; inset: auto !important; }
+    [style*="repeating-linear-gradient"] { height: 220px !important; aspect-ratio: auto !important; }
+    [style*="padding: 56px"] { padding: 24px !important; }
+    [style*="padding: 40px"] { padding: 22px !important; }
+    [style*="padding: 36px"] { padding: 22px !important; }
+    [style*="border-left: 1px solid"] { border-left: 0 !important; }
+    [style*="white-space: nowrap"] { white-space: normal !important; }
+    [style*="grid-template-rows"] { grid-template-rows: auto !important; }
+    section [style*="padding: 32px"] { padding: 20px 0 !important; }
+  }
+</style>
+</helmet>
+<div style="width: 100%; background: #FFFFFF; font-family: Figtree, system-ui, sans-serif; color: #0E2A21; -webkit-font-smoothing: antialiased; overflow: hidden">
+
+  <!-- 01 HEADER -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid #E7EDEA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 84px; display: flex; align-items: center; justify-content: space-between">
+      <a href="GIVE Inicio.dc.html" style="display: flex; align-items: center"><img src="assets/logo-dark.png" alt="GIVE Educación" style="height: 40px; width: auto; display: block" /></a>
+      <nav style="display: flex; align-items: center; gap: 34px">
+        <a href="GIVE Inicio.dc.html" style="font-size: 15px; font-weight: 500; color: #5A6B64">Inicio</a>
+        <a href="GIVE Estudiantes.dc.html" style="font-size: 15px; font-weight: 500; color: #5A6B64">Estudiantes</a>
+        <a href="GIVE Empresas.dc.html" style="font-size: 15px; font-weight: 500; color: #5A6B64">Empresas</a>
+        <a href="GIVE Equipo.dc.html" style="font-size: 15px; font-weight: 500; color: #5A6B64">Equipo</a>
+        <a href="#" style="font-size: 15px; font-weight: 600; color: #0E2A21; position: relative; padding: 6px 0">Donaciones<span style="position: absolute; left: 0; right: 0; bottom: -6px; height: 3px; border-radius: 2px; background: #00B276; display: block"></span></a>
+      </nav>
+      <a data-hdr-cta="" href="GIVE Contacto.dc.html" style="display: inline-flex; align-items: center; height: 48px; padding: 0 26px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 15px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Contáctanos</a>
+      <button type="button" data-mnav="" onClick="{{ toggleMenu }}" aria-label="Menú" style="width: 44px; height: 44px; border-radius: 12px; border: 1.5px solid #DDE5E1; background: #FFFFFF; cursor: pointer; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 4px; flex-shrink: 0">
+        <span style="width: 18px; height: 2px; background: #0E2A21; display: block"></span>
+        <span style="width: 18px; height: 2px; background: #0E2A21; display: block"></span>
+        <span style="width: 18px; height: 2px; background: #0E2A21; display: block"></span>
+      </button>
+    </div>
+    <div data-mpanel="" style="{{ menuPanel }}">
+      <div style="padding: 6px 20px 22px; display: flex; flex-direction: column; background: #FFFFFF; border-top: 1px solid #E7EDEA">
+        <a href="GIVE Inicio.dc.html" style="padding: 15px 0; font-size: 17px; font-weight: 600; color: #0E2A21; border-bottom: 1px solid #F0F4F2">Inicio</a>
+        <a href="GIVE Estudiantes.dc.html" style="padding: 15px 0; font-size: 17px; font-weight: 600; color: #0E2A21; border-bottom: 1px solid #F0F4F2">Estudiantes</a>
+        <a href="GIVE Empresas.dc.html" style="padding: 15px 0; font-size: 17px; font-weight: 600; color: #0E2A21; border-bottom: 1px solid #F0F4F2">Empresas</a>
+        <a href="GIVE Equipo.dc.html" style="padding: 15px 0; font-size: 17px; font-weight: 600; color: #0E2A21; border-bottom: 1px solid #F0F4F2">Equipo</a>
+        <a href="GIVE Donaciones.dc.html" style="padding: 15px 0; font-size: 17px; font-weight: 600; color: #0E2A21; border-bottom: 1px solid #F0F4F2">Donaciones</a>
+        <a href="GIVE Contacto.dc.html" style="margin-top: 18px; display: inline-flex; align-items: center; justify-content: center; height: 52px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 16px; font-weight: 600">Contáctanos</a>
+      </div>
+    </div>
+  </header>
+  <div style="height: 84px"></div>
+
+  <!-- 02 HERO -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 104px; display: grid; grid-template-columns: 7fr 5fr; gap: 64px; align-items: center">
+    <div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 999px; background: #FDF7EC; border: 1px solid #F0E3CB; margin-bottom: 28px">
+        <span style="width: 8px; height: 8px; border-radius: 999px; background: #F1AE44; display: block"></span>
+        <span style="font-size: 13px; font-weight: 600; color: #8A6212; letter-spacing: 0.02em">Dona a GIVE</span>
+      </div>
+      <h1 style="font-family: Outfit, sans-serif; font-size: 66px; line-height: 1.05; letter-spacing: -0.028em; font-weight: 600; margin: 0 0 26px; text-wrap: pretty">Una oportunidad puede cambiar una <span style="color: #00B276">historia</span>.</h1>
+      <p style="font-size: 19px; line-height: 1.62; color: #4F625B; margin: 0 0 40px; max-width: 580px; text-wrap: pretty">Tu aporte nos ayuda a seguir formando jóvenes, acompañándolos en su desarrollo y acercándolos a nuevas oportunidades laborales.</p>
+      <div style="display: flex; align-items: center; gap: 16px">
+        <a href="#donar" style="display: inline-flex; align-items: center; height: 60px; padding: 0 34px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero donar</a>
+        <a href="#impacto" style="display: inline-flex; align-items: center; gap: 10px; height: 60px; padding: 0 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conoce tu impacto <span style="color: #00B276">↓</span></a>
+      </div>
+    </div>
+    <div style="height: 500px; border-radius: 24px; overflow: hidden">
+      <img src="assets/hero-donaciones.png" alt="Joven sonriendo trabajando en laptop" style="width: 100%; height: 100%; object-fit: cover; display: block" />
+    </div>
+  </section>
+
+  <!-- 03 POR QUÉ TU APORTE IMPORTA -->
+  <section style="background: #F6F9F8; border-top: 1px solid #E7EDEA; border-bottom: 1px solid #E7EDEA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: center">
+      <div style="height: 520px; border-radius: 24px; overflow: hidden">
+        <img src="assets/donaciones-aporte.png" alt="Mentora ayudando a joven con laptop" style="width: 100%; height: 100%; object-fit: cover; display: block" />
+      </div>
+      <div>
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Tu aporte genera oportunidades</span>
+        <h2 style="font-family: Outfit, sans-serif; font-size: 44px; line-height: 1.12; letter-spacing: -0.022em; font-weight: 600; margin: 0 0 20px; text-wrap: pretty">Ayúdanos a llegar a más jóvenes.</h2>
+        <p style="font-size: 18px; line-height: 1.64; color: #4F625B; margin: 0 0 36px; max-width: 620px; text-wrap: pretty">Cada aporte permite que GIVE continúe desarrollando programas de formación y acompañamiento para jóvenes que buscan fortalecer sus habilidades y prepararse para el mundo laboral.</p>
+        <div style="background: #FDF7EC; border: 1px solid #F0E3CB; border-left: 5px solid #F1AE44; border-radius: 20px; padding: 34px 36px">
+          <p style="font-family: Outfit, sans-serif; font-size: 28px; line-height: 1.32; font-weight: 500; letter-spacing: -0.015em; color: #0E2A21; margin: 0; text-wrap: pretty">No estás financiando solamente una capacitación. Estás ayudando a que una persona esté mejor preparada cuando llegue su próxima oportunidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 QUÉ HACE POSIBLE TU DONACIÓN -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+    <div style="max-width: 720px; margin: 0 0 56px">
+      <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Tu impacto</span>
+      <h2 style="font-family: Outfit, sans-serif; font-size: 44px; line-height: 1.12; letter-spacing: -0.02em; font-weight: 600; margin: 0; text-wrap: pretty">Tu apoyo acompaña todo el camino.</h2>
+    </div>
+
+    <div style="position: relative">
+      <div style="position: absolute; left: 0; right: 0; top: 18px; height: 2px; background: #E2EAE6; display: block"></div>
+      <div style="position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px">
+        <sc-for list="{{ camino }}" as="paso" hint-placeholder-count="5">
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <span style="width: 38px; height: 38px; border-radius: 999px; background: #FFFFFF; border: 2px solid #00B276; color: #00734D; display: flex; align-items: center; justify-content: center; font-family: IBM Plex Mono, monospace; font-size: 12px; font-weight: 500">{{ paso.n }}</span>
+            <h3 style="font-family: Outfit, sans-serif; font-size: 23px; font-weight: 600; letter-spacing: -0.012em; margin: 6px 0 0">{{ paso.titulo }}</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #4F625B; margin: 0; text-wrap: pretty">{{ paso.texto }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 16px; margin-top: 52px; padding: 22px 28px; background: #F1FAF6; border: 1px solid #D8EDE4; border-radius: 999px; font-family: IBM Plex Mono, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #4F625B; justify-content: center">
+      <span style="color: #0E2A21; font-weight: 500">Aporte</span><span style="color: #00B276">→</span><span>Formación</span><span style="color: #00B276">→</span><span>Preparación</span><span style="color: #00B276">→</span><span style="color: #0E2A21; font-weight: 500">Oportunidad</span>
+    </div>
+  </section>
+
+  <!-- 05 IMPACTO GIVE -->
+  <section id="impacto" style="background: #0E2A21; color: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px">
+      <div style="display: grid; grid-template-columns: 6fr 5fr; gap: 72px; align-items: center; margin-bottom: 64px">
+        <div>
+          <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6ED8AF; display: block; margin-bottom: 16px">Lo que estamos construyendo juntos</span>
+          <h2 style="font-family: Outfit, sans-serif; font-size: 48px; line-height: 1.1; letter-spacing: -0.024em; font-weight: 600; margin: 0 0 22px; text-wrap: pretty">Más personas. Más empresas. Más oportunidades.</h2>
+          <p style="font-size: 18px; line-height: 1.62; color: #C6D6D0; margin: 0; max-width: 520px; text-wrap: pretty">Cada número representa personas y organizaciones que decidieron ser parte del cambio.</p>
+        </div>
+        <div style="height: 340px; border-radius: 24px; overflow: hidden">
+          <img src="assets/donaciones-impacto.png" alt="Jóvenes trabajando juntos en equipo" style="width: 100%; height: 100%; object-fit: cover; display: block" />
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.14)">
+        <div style="padding: 40px 40px 44px 0; display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: Outfit, sans-serif; font-size: 92px; line-height: 0.9; font-weight: 600; letter-spacing: -0.035em">+180</span>
+          <span style="font-size: 18px; color: #C6D6D0">Jóvenes graduados</span>
+        </div>
+        <div style="padding: 40px; border-left: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: Outfit, sans-serif; font-size: 92px; line-height: 0.9; font-weight: 600; letter-spacing: -0.035em; color: #6ED8AF">+30</span>
+          <span style="font-size: 18px; color: #C6D6D0">Empresas aliadas</span>
+        </div>
+        <div style="padding: 40px 0 44px 40px; border-left: 1px solid rgba(255,255,255,0.14); display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: Outfit, sans-serif; font-size: 92px; line-height: 0.9; font-weight: 600; letter-spacing: -0.035em; color: #F1AE44">+120</span>
+          <span style="font-size: 18px; color: #C6D6D0">Voluntarios</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 UNA HISTORIA GIVE -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+    <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Historias que continúan</span>
+    <h2 style="font-family: Outfit, sans-serif; font-size: 44px; line-height: 1.12; letter-spacing: -0.02em; font-weight: 600; margin: 0 0 56px; text-wrap: pretty">Detrás de cada cifra hay una persona.</h2>
+    <div style="display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center">
+      <div style="height: 480px; border-radius: 24px; overflow: hidden">
+        <img src="assets/donaciones-testimonio.png" alt="Retrato de joven participante GIVE" style="width: 100%; height: 100%; object-fit: cover; display: block" />
+      </div>
+      <div>
+        <span style="font-family: Outfit, sans-serif; font-size: 56px; line-height: 1; color: #F1AE44; display: block; margin-bottom: 8px">"</span>
+        <p style="font-family: Outfit, sans-serif; font-size: 32px; line-height: 1.34; letter-spacing: -0.015em; font-weight: 500; color: #0E2A21; margin: 0 0 28px; text-wrap: pretty">Espacio reservado para la quote breve del participante sobre su preparación y su primera oportunidad laboral.</p>
+        <p style="font-size: 17px; line-height: 1.66; color: #4F625B; margin: 0 0 32px; max-width: 640px; text-wrap: pretty">Espacio para una historia de tres o cuatro líneas: cómo llegó al programa, qué habilidades trabajó durante su preparación y en qué momento de su camino laboral se encuentra hoy.</p>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px">
+          <span style="width: 4px; height: 52px; border-radius: 2px; background: #00B276; display: block"></span>
+          <span style="display: flex; flex-direction: column; gap: 4px">
+            <span style="font-size: 17px; font-weight: 600">Nombre del participante</span>
+            <span style="font-size: 15px; color: #5A6B64">Programa GIVE · promoción</span>
+          </span>
+        </div>
+        <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+          <p style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.06em; color: #5A6B64; margin: 0">Historia real de participante GIVE por incorporar.</p>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 FORMAS DE APOYAR -->
+  <section style="background: #F6F9F8; border-top: 1px solid #E7EDEA; border-bottom: 1px solid #E7EDEA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px">
+      <div style="max-width: 720px; margin: 0 0 48px">
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Súmate</span>
+        <h2 style="font-family: Outfit, sans-serif; font-size: 44px; line-height: 1.12; letter-spacing: -0.02em; font-weight: 600; margin: 0; text-wrap: pretty">Hay diferentes formas de generar oportunidades.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
+        <div style="background: #FFFFFF; border: 1px solid #E2EAE6; border-radius: 22px; padding: 34px 32px 36px; display: flex; flex-direction: column; gap: 14px; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease" style-hover="transform: translateY(-5px); box-shadow: 0 16px 38px rgba(14,42,33,0.09); border-color: #CFE0D9">
+          <h3 style="font-family: Outfit, sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.012em; margin: 0">Donación personal</h3>
+          <p style="font-size: 16px; line-height: 1.6; color: #4F625B; margin: 0; flex: 1; text-wrap: pretty">Realiza un aporte y ayúdanos a continuar formando jóvenes.</p>
+          <a href="#donar" style="align-self: flex-start; display: inline-flex; align-items: center; height: 52px; padding: 0 26px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 16px; font-weight: 600; margin-top: 8px" style-hover="background: #00915F; color: #FFFFFF">Quiero donar</a>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E2EAE6; border-radius: 22px; padding: 34px 32px 36px; display: flex; flex-direction: column; gap: 14px; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease" style-hover="transform: translateY(-5px); box-shadow: 0 16px 38px rgba(14,42,33,0.09); border-color: #CFE0D9">
+          <h3 style="font-family: Outfit, sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.012em; margin: 0">Donación empresarial</h3>
+          <p style="font-size: 16px; line-height: 1.6; color: #4F625B; margin: 0; flex: 1; text-wrap: pretty">Haz que tu organización forme parte de las empresas que apoyan nuestra misión.</p>
+          <a href="#donar" style="align-self: flex-start; display: inline-flex; align-items: center; height: 52px; padding: 0 26px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 16px; font-weight: 600; margin-top: 8px" style-hover="border-color: #0E2A21; color: #0E2A21">Donar como empresa</a>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E2EAE6; border-radius: 22px; padding: 34px 32px 36px; display: flex; flex-direction: column; gap: 14px; transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease" style-hover="transform: translateY(-5px); box-shadow: 0 16px 38px rgba(14,42,33,0.09); border-color: #CFE0D9">
+          <h3 style="font-family: Outfit, sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.012em; margin: 0">Alianza</h3>
+          <p style="font-size: 16px; line-height: 1.6; color: #4F625B; margin: 0; flex: 1; text-wrap: pretty">Conversemos sobre otras formas en las que tu organización puede trabajar junto a GIVE.</p>
+          <a href="GIVE Empresas.dc.html" style="align-self: flex-start; display: inline-flex; align-items: center; height: 52px; padding: 0 26px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 16px; font-weight: 600; margin-top: 8px" style-hover="border-color: #0E2A21; color: #0E2A21">Conocer alianzas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 BLOQUE PRINCIPAL DE DONACIÓN -->
+  <section id="donar" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+    <div style="background: #F1FAF6; border: 1px solid #D8EDE4; border-radius: 28px; padding: 56px; display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start">
+      <div>
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Haz tu aporte</span>
+        <h2 style="font-family: Outfit, sans-serif; font-size: 42px; line-height: 1.1; letter-spacing: -0.022em; font-weight: 600; margin: 0 0 20px; text-wrap: pretty">Tu apoyo puede abrir la próxima oportunidad.</h2>
+        <p style="font-size: 18px; line-height: 1.62; color: #4F625B; margin: 0 0 28px; text-wrap: pretty">Selecciona cómo quieres contribuir y ayúdanos a continuar acercando formación y oportunidades a más jóvenes.</p>
+        <sc-if value="{{ showLabels }}" hint-placeholder-val="{{ true }}">
+          <p style="font-family: IBM Plex Mono, monospace; font-size: 11px; line-height: 1.6; letter-spacing: 0.04em; color: #5A6B64; margin: 0">Prototipo visual. Los métodos de pago y el proceso real de donación se definirán con GIVE.</p>
+        </sc-if>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid #D8EDE4; border-radius: 24px; padding: 36px">
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A6B64; display: block; margin-bottom: 14px">Aporte</span>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px">
+          <sc-for list="{{ montos }}" as="m" hint-placeholder-count="4">
+            <sc-if value="{{ m.active }}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{ m.select }}" style="height: 64px; border-radius: 16px; border: 2px solid #00B276; background: #F1FAF6; font-family: Outfit, sans-serif; font-size: 22px; font-weight: 600; color: #00734D; cursor: pointer">{{ m.label }}</button>
+            </sc-if>
+            <sc-if value="{{ m.inactive }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ m.select }}" style="height: 64px; border-radius: 16px; border: 1.5px solid #DDE5E1; background: #FFFFFF; font-family: Outfit, sans-serif; font-size: 22px; font-weight: 600; color: #0E2A21; cursor: pointer" style-hover="border-color: #00B276">{{ m.label }}</button>
+            </sc-if>
+          </sc-for>
+        </div>
+        <input type="text" placeholder="Otra cantidad" style="width: 100%; box-sizing: border-box; height: 56px; border-radius: 16px; border: 1.5px solid #DDE5E1; background: #FFFFFF; padding: 0 18px; font-size: 16px; color: #0E2A21; outline: none; margin-bottom: 28px" style-focus="border-color: #00B276" />
+
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A6B64; display: block; margin-bottom: 14px">Frecuencia</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px">
+          <sc-for list="{{ frecuencias }}" as="f" hint-placeholder-count="2">
+            <sc-if value="{{ f.active }}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{ f.select }}" style="height: 54px; border-radius: 999px; border: 2px solid #00B276; background: #F1FAF6; font-size: 16px; font-weight: 600; color: #00734D; cursor: pointer">{{ f.label }}</button>
+            </sc-if>
+            <sc-if value="{{ f.inactive }}" hint-placeholder-val="{{ true }}">
+              <button type="button" onClick="{{ f.select }}" style="height: 54px; border-radius: 999px; border: 1.5px solid #DDE5E1; background: #FFFFFF; font-size: 16px; font-weight: 500; color: #0E2A21; cursor: pointer" style-hover="border-color: #00B276">{{ f.label }}</button>
+            </sc-if>
+          </sc-for>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px">
+          <label style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 600">Nombre</span><input type="text" placeholder="Nombre" style="height: 52px; border-radius: 14px; border: 1.5px solid #DDE5E1; background: #FFFFFF; padding: 0 16px; font-size: 16px; color: #0E2A21; outline: none" style-focus="border-color: #00B276" /></label>
+          <label style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 600">Apellido</span><input type="text" placeholder="Apellido" style="height: 52px; border-radius: 14px; border: 1.5px solid #DDE5E1; background: #FFFFFF; padding: 0 16px; font-size: 16px; color: #0E2A21; outline: none" style-focus="border-color: #00B276" /></label>
+        </div>
+        <label style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px"><span style="font-size: 14px; font-weight: 600">Correo electrónico</span><input type="email" placeholder="tucorreo@ejemplo.com" style="height: 52px; border-radius: 14px; border: 1.5px solid #DDE5E1; background: #FFFFFF; padding: 0 16px; font-size: 16px; color: #0E2A21; outline: none" style-focus="border-color: #00B276" /></label>
+
+        <button type="button" onClick="{{ enviar }}" style="width: 100%; height: 60px; border-radius: 999px; border: 0; background: #00B276; color: #FFFFFF; font-family: Figtree, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer" style-hover="background: #00915F">{{ enviarLabel }}</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 CONFIANZA Y TRANSPARENCIA -->
+  <section style="background: #F6F9F8; border-top: 1px solid #E7EDEA; border-bottom: 1px solid #E7EDEA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: 6fr 5fr; gap: 80px; align-items: center">
+      <div>
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Tu confianza importa</span>
+        <h2 style="font-family: Outfit, sans-serif; font-size: 38px; line-height: 1.14; letter-spacing: -0.02em; font-weight: 600; margin: 0 0 18px; text-wrap: pretty">Queremos que sepas qué hace posible tu apoyo.</h2>
+        <p style="font-size: 18px; line-height: 1.64; color: #4F625B; margin: 0; text-wrap: pretty">Los aportes contribuyen al desarrollo de las iniciativas de GIVE orientadas a la formación, acompañamiento y empleabilidad de jóvenes.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid #DDE6E2">
+        <a href="GIVE Equipo.dc.html" style="display: flex; align-items: center; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid #DDE6E2; font-family: Outfit, sans-serif; font-size: 20px; font-weight: 500; color: #0E2A21" style-hover="color: #00B276">Conoce más sobre GIVE <span style="color: #00B276">→</span></a>
+        <a href="#impacto" style="display: flex; align-items: center; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid #DDE6E2; font-family: Outfit, sans-serif; font-size: 20px; font-weight: 500; color: #0E2A21" style-hover="color: #00B276">Conoce nuestro impacto <span style="color: #00B276">→</span></a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid #DDE6E2; font-family: Outfit, sans-serif; font-size: 20px; font-weight: 500; color: #0E2A21" style-hover="color: #00B276">Información institucional <span style="color: #00B276">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 FAQ DONACIONES -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 24px">
+    <div style="display: grid; grid-template-columns: 4fr 8fr; gap: 72px; align-items: start">
+      <h2 style="font-family: Outfit, sans-serif; font-size: 40px; line-height: 1.12; letter-spacing: -0.02em; font-weight: 600; margin: 0; text-wrap: pretty">Preguntas sobre tu donación</h2>
+      <div style="border-top: 1px solid #E2EAE6">
+        <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
+          <div style="border-bottom: 1px solid #E2EAE6">
+            <button type="button" onClick="{{ faq.toggle }}" style="width: 100%; background: transparent; border: 0; padding: 26px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; cursor: pointer; text-align: left; font-family: Outfit, sans-serif; font-size: 21px; font-weight: 500; letter-spacing: -0.01em; color: #0E2A21">
+              <span>{{ faq.q }}</span>
+              <span style="width: 32px; height: 32px; border-radius: 999px; background: #F1FAF6; border: 1px solid #D8EDE4; display: flex; align-items: center; justify-content: center; color: #00734D; font-size: 16px; flex-shrink: 0">{{ faq.sign }}</span>
+            </button>
+            <div style="{{ faq.panel }}">
+              <p style="font-size: 17px; line-height: 1.66; color: #4F625B; margin: 0 0 28px; max-width: 780px; text-wrap: pretty">{{ faq.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 CTA FINAL -->
+  <section style="background: #00B276">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; text-align: center">
+      <h2 style="font-family: Outfit, sans-serif; font-size: 54px; line-height: 1.1; letter-spacing: -0.025em; font-weight: 600; color: #FFFFFF; margin: 0 auto 22px; max-width: 900px; text-wrap: pretty">Más oportunidades empiezan con personas que deciden ayudar.</h2>
+      <p style="font-size: 19px; line-height: 1.6; color: #E2F7EE; margin: 0 auto 44px; max-width: 660px; text-wrap: pretty">Sé parte de una comunidad que cree en el talento joven y en el poder de una oportunidad.</p>
+      <a href="#donar" style="display: inline-flex; align-items: center; height: 62px; padding: 0 38px; border-radius: 999px; background: #F1AE44; color: #2B1F05; font-size: 17px; font-weight: 600" style-hover="background: #E59F2E; color: #2B1F05">Quiero apoyar a GIVE</a>
+    </div>
+  </section>
+
+  <!-- 12 FOOTER -->
+  <footer style="background: #0E2A21; color: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 36px; display: grid; grid-template-columns: 4fr 2fr 2fr 3fr; gap: 48px">
+      <div>
+        <img src="assets/logo-white.png" alt="GIVE Educación" style="height: 44px; width: auto; display: block; margin-bottom: 22px" />
+        <p style="font-size: 16px; line-height: 1.6; color: #A9BDB5; margin: 0; max-width: 340px; text-wrap: pretty">Impulsamos la empleabilidad de jóvenes conectando educación, habilidades y oportunidades.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6ED8AF; margin-bottom: 4px">Sitio</span>
+        <a href="GIVE Inicio.dc.html" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Inicio</a>
+        <a href="GIVE Estudiantes.dc.html" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Estudiantes</a>
+        <a href="GIVE Empresas.dc.html" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Empresas</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6ED8AF; margin-bottom: 4px">Organización</span>
+        <a href="GIVE Equipo.dc.html" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Equipo</a>
+        <a href="GIVE Donaciones.dc.html" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Donaciones</a>
+        <a href="GIVE Contacto.dc.html" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Contacto</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6ED8AF; margin-bottom: 4px">Síguenos</span>
+        <a href="#" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Instagram</a>
+        <a href="#" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">LinkedIn</a>
+        <a href="#" style="font-size: 15px; color: #DCE7E3" style-hover="color: #6ED8AF">Facebook</a>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+      <div style="border-top: 1px solid rgba(255,255,255,0.12); padding: 24px 0 44px; display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: #8FA69E">
+        <span>© GIVE Educación</span>
+        <a href="#" style="font-size: 14px; color: #8FA69E" style-hover="color: #6ED8AF">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPlaceholderLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototipo&quot;}}">
+const FAQS = [
+  { q: "¿Cómo puedo realizar una donación?", a: "Contenido por definir con GIVE. En esta sección se explicarán los canales oficiales habilitados para realizar un aporte." },
+  { q: "¿Puedo realizar una donación mensual?", a: "Contenido por definir con GIVE. El módulo de donación contempla la opción de aporte mensual; las condiciones operativas se confirmarán con la organización." },
+  { q: "¿Puedo donar como empresa?", a: "Sí. Las organizaciones interesadas pueden apoyar la misión de GIVE; el detalle del proceso se definirá con la organización." },
+  { q: "¿Dónde puedo conocer el impacto de GIVE?", a: "En esta página compartimos las cifras disponibles de GIVE. Próximamente se incorporará información institucional adicional." },
+  { q: "¿Puedo cancelar una donación recurrente?", a: "Contenido por definir con GIVE. Aquí se explicará cómo gestionar o cancelar un aporte recurrente." },
+];
+
+class Component extends DCLogic {
+  state = { open: 0, monto: "S/ 50", frecuencia: "Una vez", enviado: false };
+
+  renderVals() {
+    return {
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !(s && s.menuOpen) })),
+      menuPanel: { overflow: "hidden", maxHeight: (this.state && this.state.menuOpen) ? "460px" : "0px", transition: "max-height 0.34s cubic-bezier(0.4,0,0.2,1)", background: "#FFFFFF" },
+      showLabels: this.props.showPlaceholderLabels ?? true,
+      enviar: () => this.setState({ enviado: true }),
+      enviarLabel: this.state.enviado ? "¡Listo! Te contactaremos pronto ✓" : "Continuar con mi donación",
+      camino: [
+        { n: "01", titulo: "Formación", texto: "Contribuyes a que más jóvenes puedan acceder al Programa GIVE." },
+        { n: "02", titulo: "Desarrollo", texto: "Ayudas a fortalecer habilidades personales, sociales y laborales." },
+        { n: "03", titulo: "Acompañamiento", texto: "Permites que los participantes reciban orientación durante su preparación." },
+        { n: "04", titulo: "Empleabilidad", texto: "Apoyas su preparación para CV, entrevistas y procesos de selección." },
+        { n: "05", titulo: "Oportunidades", texto: "Contribuyes a que GIVE continúe conectando jóvenes con empresas y oportunidades laborales." },
+      ],
+      montos: ["S/ 25", "S/ 50", "S/ 100", "S/ 200"].map((label) => ({
+        label,
+        active: this.state.monto === label,
+        inactive: this.state.monto !== label,
+        select: () => this.setState({ monto: label }),
+      })),
+      frecuencias: ["Una vez", "Mensualmente"].map((label) => ({
+        label,
+        active: this.state.frecuencia === label,
+        inactive: this.state.frecuencia !== label,
+        select: () => this.setState({ frecuencia: label }),
+      })),
+      faqs: FAQS.map((f, i) => ({
+        q: f.q,
+        a: f.a,
+        sign: this.state.open === i ? "−" : "+",
+        panel: {
+          overflow: "hidden",
+          maxHeight: this.state.open === i ? "220px" : "0px",
+          opacity: this.state.open === i ? 1 : 0,
+          transform: this.state.open === i ? "translateY(0)" : "translateY(-6px)",
+          transition: "max-height 0.38s cubic-bezier(0.4,0,0.2,1), opacity 0.28s ease, transform 0.32s ease",
+        },
+        toggle: () => this.setState((s) => ({ open: s.open === i ? -1 : i })),
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>
