@@ -45,6 +45,7 @@
     [style*="white-space: nowrap"] { white-space: normal !important; }
     [style*="grid-template-rows"] { grid-template-rows: auto !important; }
     section [style*="padding: 32px"] { padding: 20px 0 !important; }
+    [data-btn-row] { flex-direction: column !important; align-items: stretch !important; }
   }
 </style>
 </helmet>
@@ -90,9 +91,9 @@
       </div>
       <h1 style="font-family: Outfit, sans-serif; font-size: 66px; line-height: 1.05; letter-spacing: -0.028em; font-weight: 600; margin: 0 0 26px; text-wrap: pretty">Una oportunidad puede cambiar una <span style="color: #00B276">historia</span>.</h1>
       <p style="font-size: 19px; line-height: 1.62; color: #4F625B; margin: 0 0 40px; max-width: 580px; text-wrap: pretty">Tu aporte nos ayuda a seguir formando jóvenes, acompañándolos en su desarrollo y acercándolos a nuevas oportunidades laborales.</p>
-      <div style="display: flex; align-items: center; gap: 16px">
-        <a href="#donar" style="display: inline-flex; align-items: center; height: 60px; padding: 0 34px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero donar</a>
-        <a href="#impacto" style="display: inline-flex; align-items: center; gap: 10px; height: 60px; padding: 0 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conoce tu impacto <span style="color: #00B276">↓</span></a>
+      <div data-btn-row="" style="display: flex; align-items: center; gap: 16px">
+        <a href="#donar" style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 18px 34px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero donar</a>
+        <a href="#impacto" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conoce tu impacto <span style="color: #00B276">↓</span></a>
       </div>
     </div>
     <div style="height: 500px; border-radius: 24px; overflow: hidden">

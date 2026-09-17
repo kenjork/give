@@ -46,6 +46,7 @@
     [style*="white-space: nowrap"] { white-space: normal !important; }
     [style*="grid-template-rows"] { grid-template-rows: auto !important; }
     section [style*="padding: 32px"] { padding: 20px 0 !important; }
+    [data-btn-row] { flex-direction: column !important; align-items: stretch !important; }
   }
 </style>
 </helmet>
@@ -91,9 +92,9 @@
       </div>
       <h1 style="font-family: Outfit, sans-serif; font-size: 66px; line-height: 1.05; letter-spacing: -0.028em; font-weight: 600; margin: 0 0 26px; text-wrap: pretty">Prepárate para trabajar en <span style="color: #00B276">grandes empresas</span>.</h1>
       <p style="font-size: 19px; line-height: 1.62; color: #4F625B; margin: 0 0 40px; max-width: 580px; text-wrap: pretty">Desarrolla tus habilidades, prepárate para procesos de selección y conoce oportunidades laborales de nuestras empresas aliadas.</p>
-      <div style="display: flex; align-items: center; gap: 16px">
-        <a href="#contacto" style="display: inline-flex; align-items: center; height: 60px; padding: 0 34px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero ser parte de GIVE</a>
-        <a href="#oportunidades" style="display: inline-flex; align-items: center; gap: 10px; height: 60px; padding: 0 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conocer oportunidades <span style="color: #00B276">↓</span></a>
+      <div data-btn-row="" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+        <a href="#contacto" style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 18px 34px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero ser parte de GIVE</a>
+        <a href="#oportunidades" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #D9E2DE; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conocer oportunidades <span style="color: #00B276">↓</span></a>
       </div>
     </div>
     <div style="position: relative">
@@ -135,9 +136,9 @@
         </sc-for>
       </div>
 
-      <div style="display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 32px">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; margin-top: 32px">
         <p style="font-family: IBM Plex Mono, monospace; font-size: 11px; line-height: 1.6; letter-spacing: 0.04em; color: #5A6B64; margin: 0; max-width: 620px">Contenido demostrativo del prototipo. Las empresas y posiciones deben validarse con GIVE. No corresponden a vacantes disponibles en tiempo real.</p>
-        <a href="GIVE Empresas.dc.html" style="display: inline-flex; align-items: center; height: 54px; padding: 0 28px; border-radius: 999px; background: #0E2A21; color: #FFFFFF; font-size: 16px; font-weight: 600; white-space: nowrap" style-hover="background: #00B276; color: #FFFFFF">Ver empresas aliadas</a>
+        <a href="GIVE Empresas.dc.html" style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 16px 28px; border-radius: 999px; background: #0E2A21; color: #FFFFFF; font-size: 16px; font-weight: 600" style-hover="background: #00B276; color: #FFFFFF">Ver empresas aliadas</a>
       </div>
     </div>
   </section>
@@ -283,9 +284,9 @@
         <span style="font-family: IBM Plex Mono, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #00734D; display: block; margin-bottom: 16px">Becas GIVE</span>
         <h2 style="font-family: Outfit, sans-serif; font-size: 46px; line-height: 1.1; letter-spacing: -0.022em; font-weight: 600; margin: 0 0 20px; text-wrap: pretty">Que el dinero no sea una barrera para comenzar.</h2>
         <p style="font-size: 18px; line-height: 1.62; color: #4F625B; margin: 0 0 40px; max-width: 520px; text-wrap: pretty">GIVE busca acercar su programa a jóvenes que necesitan una oportunidad. Conoce cómo funciona nuestro proceso de becas y postula para participar.</p>
-        <div style="display: flex; align-items: center; gap: 16px">
-          <a href="#contacto" style="display: inline-flex; align-items: center; height: 58px; padding: 0 32px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero postular a una beca</a>
-          <a href="#requisitos" style="display: inline-flex; align-items: center; height: 58px; padding: 0 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #CFE7DC; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conocer requisitos</a>
+        <div data-btn-row="" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+          <a href="#contacto" style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 17px 32px; border-radius: 999px; background: #00B276; color: #FFFFFF; font-size: 17px; font-weight: 600" style-hover="background: #00915F; color: #FFFFFF">Quiero postular a una beca</a>
+          <a href="#requisitos" style="display: inline-flex; align-items: center; justify-content: center; text-align: center; padding: 17px 30px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #CFE7DC; color: #0E2A21; font-size: 17px; font-weight: 600" style-hover="border-color: #0E2A21; color: #0E2A21">Conocer requisitos</a>
         </div>
       </div>
       <div style="height: 460px; border-radius: 24px; overflow: hidden">
